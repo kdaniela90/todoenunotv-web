@@ -8,62 +8,84 @@
 </head>
 <body>
 
+  <!-- Banner principal -->
   <header class="banner">
-    <img src="banner.png" alt="Banner TODO EN UNO TV" class="banner-img">
+    <img src="assets/banner.png" alt="Banner TODO EN UNO TV" class="banner-img">
   </header>
 
+  <!-- Introducción -->
   <section class="intro">
     <h1>¡TODO el entretenimiento que amas, en un solo lugar!</h1>
     <p>Disfruta contenido en vivo, películas, series y mucho más desde tu Smart TV, celular o tablet.</p>
     <a href="https://wa.me/522204787600?text=Hola,%20quisiera%20probar%20TODO%20EN%20UNO%20TV%20por%202%20horas%20gratis." class="btn">Solicita tu demo gratis</a>
   </section>
 
+  <!-- Características -->
   <section class="features">
     <div class="feature">
-      <img src="icono-live-tv.png" alt="Canales en vivo">
+      <img src="assets/icono-live-tv.png" alt="Canales en vivo">
       <h2>+2,200 canales en vivo</h2>
       <p>Locales, nacionales e internacionales, incluyendo todos los deportes y eventos PPV.</p>
     </div>
 
     <div class="feature">
-      <img src="icono-movies.png" alt="Películas y estrenos">
+      <img src="assets/icono-movies.png" alt="Películas y estrenos">
       <h2>+37,000 películas y estrenos</h2>
       <p>De Netflix, Apple TV+, Disney+, Prime Video, Paramount+, HBO Max y más.</p>
     </div>
 
     <div class="feature">
-      <img src="icono-series.png" alt="Series">
+      <img src="assets/icono-series.png" alt="Series">
       <h2>+18,000 series</h2>
       <p>De tus plataformas favoritas, actualizadas constantemente.</p>
     </div>
   </section>
 
+  <!-- Carrusel de imágenes -->
   <section class="carousel">
     <div class="slides">
-      <img src="https://image.tmdb.org/t/p/original/cm8TNGBGG0aBfWj0LgrESHv8tir.jpg" alt="">
-      <img src="https://image.tmdb.org/t/p/original/m1jFoahEbeQXtx4zArT2FKdbNIj.jpg" alt="">
-      <img src="https://image.tmdb.org/t/p/original/wPLysNDLffQLOVebZQCbXJEv6E6.jpg" alt="">
-      <img src="https://image.tmdb.org/t/p/original/xP4SIyOn7vUh0OqT4a30MHhNFMO.jpg" alt="">
-      <img src="https://image.tmdb.org/t/p/original/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg" alt="">
-      <img src="https://image.tmdb.org/t/p/original/q8dWfc4JwQuv3HayIZeO84jAXED.jpg" alt="">
+      <img src="https://image.tmdb.org/t/p/original/cm8TNGBGG0aBfWj0LgrESHv8tir.jpg" alt="Poster 1">
+      <img src="https://image.tmdb.org/t/p/original/m1jFoahEbeQXtx4zArT2FKdbNIj.jpg" alt="Poster 2">
+      <img src="https://image.tmdb.org/t/p/original/wPLysNDLffQLOVebZQCbXJEv6E6.jpg" alt="Poster 3">
+      <img src="https://image.tmdb.org/t/p/original/xP4SIyOn7vUh0OqT4a30MHhNFMO.jpg" alt="Poster 4">
+      <img src="https://image.tmdb.org/t/p/original/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg" alt="Poster 5">
+      <img src="https://image.tmdb.org/t/p/original/q8dWfc4JwQuv3HayIZeO84jAXED.jpg" alt="Poster 6">
     </div>
   </section>
 
+  <!-- Video embebido (opcional, sustituye la URL cuando la tengas) -->
+  <section class="video">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Botón de planes -->
+  <div class="btn-container">
+    <a class="btn" href="https://wa.me/522204787600?text=Hola,%20quisiera%20probar%20TODO%20EN%20UNO%20TV%20por%202%20horas%20gratis.">Ver precios y planes</a>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <img src="logo-degradado.png" alt="Logo TODO EN UNO TV" class="footer-logo">
+    <img src="assets/logo-degradado.png" alt="Logo TODO EN UNO TV" class="footer-logo">
     <p>© TODO EN UNO TV — Todos los derechos reservados</p>
+    <p>
+      <a href="https://wa.me/522204787600" target="_blank" style="color: white; text-decoration: underline;">Contáctanos por WhatsApp</a>
+    </p>
   </footer>
 
+  <!-- Carrusel JS -->
   <script>
-    // Carrusel automático
     let index = 0;
     const slides = document.querySelectorAll('.slides img');
+
     function changeSlide() {
-      slides.forEach((img, i) => img.style.display = i === index ? 'block' : 'none');
+      slides.forEach(img => img.classList.remove('active'));
+      slides[index].classList.add('active');
       index = (index + 1) % slides.length;
     }
+
     changeSlide();
     setInterval(changeSlide, 3000);
   </script>
+
 </body>
 </html>
