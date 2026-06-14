@@ -1367,8 +1367,8 @@ footer{
     </div>
     <!-- Device tabs -->
     <div class="guides-tabs reveal">
-      <button class="guide-tab active" data-target="g-smarttv"><i class="fa-solid fa-tv"></i> Smart TV</button>
-      <button class="guide-tab" data-target="g-firestick"><i class="fa-solid fa-fire"></i> Firestick</button>
+      <button class="guide-tab active" data-target="g-firestick"><i class="fa-solid fa-fire"></i> Fire TV / Fire Stick</button>
+      <button class="guide-tab" data-target="g-smarttv"><i class="fa-solid fa-tv"></i> Smart TV</button>
       <button class="guide-tab" data-target="g-androidbox"><i class="fa-brands fa-android"></i> Android TV Box</button>
       <button class="guide-tab" data-target="g-iphone"><i class="fa-brands fa-apple"></i> iPhone / iPad</button>
       <button class="guide-tab" data-target="g-android"><i class="fa-solid fa-mobile-screen"></i> Android</button>
@@ -1376,7 +1376,7 @@ footer{
     </div>
 
     <!-- Smart TV -->
-    <div class="guide-panel active reveal" id="g-smarttv">
+    <div class="guide-panel reveal" id="g-smarttv">
       <div class="guide-steps">
         <div class="guide-step"><div class="guide-step-num">1</div><div class="guide-step-body"><div class="guide-step-title">Abre la tienda de apps</div><div class="guide-step-desc">Ve a Samsung Smart Hub, LG Content Store o Sony Google Play Store según tu modelo de TV.</div></div></div>
         <div class="guide-step"><div class="guide-step-num">2</div><div class="guide-step-body"><div class="guide-step-title">Busca e instala la app</div><div class="guide-step-desc">Descarga <strong>IPTV Smarters Pro</strong> o <strong>TiviMate</strong> (ambas gratuitas y compatibles).</div></div></div>
@@ -1386,15 +1386,15 @@ footer{
       <div class="guide-note">¿Tienes dudas? Te guiamos paso a paso por <a href="https://wa.me/522204787600?text=Hola,%20necesito%20ayuda%20con%20la%20instalación%20en%20Smart%20TV" target="_blank">WhatsApp →</a></div>
     </div>
 
-    <!-- Firestick -->
-    <div class="guide-panel" id="g-firestick">
+    <!-- Fire TV / Fire Stick -->
+    <div class="guide-panel active reveal" id="g-firestick">
       <div class="guide-steps">
-        <div class="guide-step"><div class="guide-step-num">1</div><div class="guide-step-body"><div class="guide-step-title">Activa apps de fuentes desconocidas</div><div class="guide-step-desc">Ve a Configuración → Mi Fire TV → Opciones de desarrollador → Activa "Apps de fuentes desconocidas".</div></div></div>
-        <div class="guide-step"><div class="guide-step-num">2</div><div class="guide-step-body"><div class="guide-step-title">Descarga la app Downloader</div><div class="guide-step-desc">Búscala en el Amazon App Store de tu Firestick. Es gratuita y te permite instalar apps externas.</div></div></div>
-        <div class="guide-step"><div class="guide-step-num">3</div><div class="guide-step-body"><div class="guide-step-title">Instala la app de TODO EN UNO TV</div><div class="guide-step-desc">Abre Downloader, ingresa el enlace que te enviamos por WhatsApp y descarga el instalador.</div></div></div>
-        <div class="guide-step"><div class="guide-step-num">4</div><div class="guide-step-body"><div class="guide-step-title">Configura con tus datos</div><div class="guide-step-desc">Abre la app, selecciona "Xtream Codes" e ingresa las credenciales que te proporcionamos.</div></div></div>
+        <div class="guide-step"><div class="guide-step-num">1</div><div class="guide-step-body"><div class="guide-step-title">Activa apps de fuentes desconocidas</div><div class="guide-step-desc">Ve a <strong>Configuración → Mi Fire TV → Opciones de desarrollador</strong> → activa "Apps de fuentes desconocidas" y "ADB Debugging".</div></div></div>
+        <div class="guide-step"><div class="guide-step-num">2</div><div class="guide-step-body"><div class="guide-step-title">Abre Downloader e ingresa el código</div><div class="guide-step-desc">Descarga <strong>Downloader</strong> desde el Amazon App Store (es gratis). Ábrela, selecciona la opción numérica e ingresa el código: <strong style="color:var(--c1);font-size:1.1em">5579155</strong></div></div></div>
+        <div class="guide-step"><div class="guide-step-num">3</div><div class="guide-step-body"><div class="guide-step-title">Instala y abre la app</div><div class="guide-step-desc">Descarga e instala la app que aparece. Al finalizar, ábrela y selecciona <strong>"Login with Xtream Codes API"</strong>.</div></div></div>
+        <div class="guide-step"><div class="guide-step-num">4</div><div class="guide-step-body"><div class="guide-step-title">Ingresa tus credenciales</div><div class="guide-step-desc">Introduce el servidor, usuario y contraseña que te enviamos por WhatsApp. ¡En segundos tienes acceso completo!</div></div></div>
       </div>
-      <div class="guide-note">¿Tienes dudas? Te guiamos paso a paso por <a href="https://wa.me/522204787600?text=Hola,%20necesito%20ayuda%20con%20la%20instalación%20en%20Firestick" target="_blank">WhatsApp →</a></div>
+      <div class="guide-note">¿Tienes dudas? Te guiamos paso a paso por <a href="https://wa.me/522204787600?text=Hola,%20necesito%20ayuda%20con%20la%20instalación%20en%20Fire%20TV%20Stick" target="_blank">WhatsApp →</a></div>
     </div>
 
     <!-- Android TV Box -->
@@ -1731,7 +1731,7 @@ const counterObs=new IntersectionObserver(entries=>{
     }
   });
 },{threshold:.4});
-document.querySelectorAll('[data-target]').forEach(el=>counterObs.observe(el));
+document.querySelectorAll('.cat-count [data-target]').forEach(el=>counterObs.observe(el));
 
 /* ══════════════════════════════════════════════════
    TESTIMONIALS CAROUSEL
